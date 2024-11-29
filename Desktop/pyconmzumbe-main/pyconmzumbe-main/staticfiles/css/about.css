@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f0f8f5, #f7f7f7);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to bottom, #eaf4ec, #ffffff);
+}
+
+.event-details h2 {
+    font-size: 24px;
+    color: #004a23;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-title h1 {
+    font-size: 70px;
+    color: #247427;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 0px #e8db45;
+}
+
+.description p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.description .highlight {
+    color: #247427;
+    font-weight: bold;
+}
+
+.description .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}

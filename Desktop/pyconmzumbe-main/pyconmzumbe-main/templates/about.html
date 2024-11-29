@@ -1,0 +1,263 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyCon Tanzania</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f0f8f5, #f7f7f7);
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #ffffff;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline-block;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        nav ul li .btn {
+            background-color: #28a745;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(to bottom, #eaf4ec, #ffffff);
+        }
+        
+        .event-details h2 {
+            font-size: 24px;
+            color: #004a23;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .hero-title h1 {
+            font-size: 70px;
+            color: #247427;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0px #e8db45;
+        }
+        
+        .description p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .description .highlight {
+            color: #247427;
+            font-weight: bold;
+        }
+        
+        .description .btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .programme {
+            background-color: #1c3724;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        .programme h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .programme .subtitle {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #c6d3c6;
+        }
+        
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .card {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h3 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .card .line {
+            width: 50px;
+            height: 2px;
+            background-color: #000;
+            margin: 10px auto;
+        }
+        
+        .card p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .keynote-speakers {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+            color: #333;
+        }
+        
+        .keynote-speakers h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .keynote-speakers .subtitle {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .speakers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .speaker {
+            text-align: center;
+            max-width: 200px;
+        }
+        
+        .speaker img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #0d6f35;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        
+        .speaker h3 {
+            font-size: 16px;
+            margin: 0;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        
+        
+    </style>
+    
+</head>
+<body>
+   
+    <section class="hero">
+        <div class="event-details">
+            <h2>01 - 05 December, 2024 . Dar es Salaam</h2>
+        </div>
+        <div class="hero-title">
+            <h1>PYCON<br>TANZANIA</h1>
+        </div>
+        <div class="description">
+            <p>
+                Join us for the 5th Python Conference at the 
+                <span class="highlight">University of Dar es Salaam, Mlimani City Campus</span>, 
+                where Python developers, enthusiasts, and learners from across East Africa will gather 
+                to share knowledge, build connections, and celebrate our growing tech community.
+            </p>
+           
+        </div>
+    </section>
+    <section class="programme">
+        <h2>Our Programme</h2>
+        <p class="subtitle">What to expect at the 5th Annual Python Conference 2024</p>
+        <div class="cards">
+            <div class="card">
+                <h3>Workshops</h3>
+                <div class="line"></div>
+                <p>
+                    Workshops are interactive sessions where you can learn new skills, get hands-on 
+                    experience with Python, and even build something together. These sessions are 
+                    designed to be interactive, engaging, and fun for everyone.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Talks</h3>
+                <div class="line"></div>
+                <p>
+                    Talks are 30-minute long technical presentations on any topic that might interest 
+                    the Python community. It doesn't have to be something you've created, feel free to 
+                    share something you've learned or a technique you think others will find useful.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Main Conference</h3>
+                <div class="line"></div>
+                <p>
+                    PyCon Tanzania is the premier gathering for Python enthusiasts, developers, and 
+                    tech innovators from across East Africa and beyond. Join us for an inspiring 
+                    celebration of Python, featuring engaging talks, hands-on workshops, and 
+                    unparalleled networking opportunities.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+</body>
+</html>
