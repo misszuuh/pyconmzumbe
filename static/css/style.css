@@ -1,0 +1,52 @@
+.text-center {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+
+
+  .footer {
+    width: 100%;
+    background-color: #f8f9fa; /* Light background color */
+    color: #333; /* Text color */
+  }
+  
+  .footer h2,
+  .footer h3 {
+    color: #000; /* Heading color */
+  }
+  
+  .footer p {
+    margin: 10px 0; /* Add space between elements */
+  }
+  
+  .social-icons a {
+    font-size: 1.5rem; /* Size for social icons */
+    color: #333; /* Default color */
+    margin-right: 10px; /* Space between icons */
+  }
+  
+  .social-icons a:hover {
+    color: #007bff; /* Hover color for icons */
+  }
+  
+  .container-fluid {
+    padding: 0 10%; /* Add padding for larger screens */
+  }
+  
+  .logo-section {
+    margin-bottom: 20px; /* Space between logo, address, and social media */
+  }
+  
+  @media (max-width: 768px) {
+    .footer .container-fluid {
+      padding: 0 5%; /* Reduce padding for smaller screens */
+    }
+  
+    .social-icons a {
+      font-size: 1.25rem; /* Adjust icon size for smaller screens */
+      margin-right: 8px; /* Adjust spacing */
+    }
+  }
+  

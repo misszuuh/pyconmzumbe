@@ -10,7 +10,7 @@
     {% compress css %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="stylesheet" href="{% static 'djangogirlstz/fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mzumbepycon/fontawesome/css/all.min.css' %}">
     {% endcompress %}
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,28 +67,365 @@
       </div>
     </div>
   </nav>
-  <div class="container">
-    <!-- Background Image with Overlay -->
-    <div class="card text-bg-dark position-relative">
-      <img src="{% static 'mzumbepycon/images/backg1.jpg' %}" class="card-img" alt="Background Image" style="object-fit: cover; height: 100%; width: 100%;">
-      
-      <!-- Black Overlay -->
-      <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.7);"></div>
-  
-      <!-- Floating Card -->
-      <div class="card position-absolute top-50 start-50 translate-middle text-center">
-        <div class="row"style>
-          <div class="col-md-6">
-            <img src="{% static 'mzumbepycon/images/JTM_7346.jpg' %}" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-6">
-            <div class="card-body">
-              <h5 class="card-title">Join the Pycon University Community today</h5>
-              <p class="card-text">Hello Mzumbe</p>
+  <div class="container-fluid p-0">
+    <!-- Fullscreen Background Section -->
+    <div class="position-relative" style="height: 80vh; width: 100vw; overflow: hidden;">
+        <!-- Background Image with Overlay -->
+        <img src="{% static 'mzumbepycon/images/backg1.jpg' %}" alt="Background Image"
+             style="object-fit: cover; height: 100%; width: 100%; position: absolute; z-index: 1;">
+        <div style="background-color: rgba(0, 0, 0, 0.9); height: 100%; width: 100%; position: absolute; z-index: 2;"></div>
+        
+        <!-- Foreground Content -->
+        <div class="d-flex flex-column align-items-center justify-content-center position-relative text-white"
+             style="z-index: 3; height: 100%; width: 100%;">
+            <!-- Header and Description -->
+            <div class="row w-75 text-white mb-3">
+                <!-- Left Image Section -->
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="{% static 'mzumbepycon/images/JTM_7346.jpg' %}" alt="Left Side Image" 
+                         class="img-fluid rounded" 
+                         style="max-height: 300px; object-fit: cover;">
+                </div>
+                <!-- Right Text Section -->
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <h2 class="fw-bold" style="font-size: 2.5rem;">Join the Pycon University Community Today</h2>
+                    <p style="font-size: 1.2rem;">
+                        Here describe the Pycon University chapter in a way that it may invite one to register 
+                        and become a member. Make it a short paragraph.
+                    </p>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Dropdown Card -->
+    <div class="card w-75 shadow-lg position-relative mx-auto" 
+         style="background-color: rgba(255, 255, 255, 0.9); border-radius: 12px; margin-top: -50px; z-index: 4;">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Search Event Dropdown -->
+                <div class="form-group">
+                    <label for="searchEvent" class="form-label text-danger">Search Event</label>
+                    <select id="searchEvent" class="form-select">
+                        <option selected>Django Girls</option>
+                        <option value="1">PyCon Talk</option>
+                        <option value="2">Hackathon</option>
+                    </select>
+                </div>
+                <!-- Place Dropdown -->
+                <div class="form-group">
+                    <label for="place" class="form-label text-danger">Place</label>
+                    <select id="place" class="form-select">
+                        <option selected>Arusha</option>
+                        <option value="1">Mwanza</option>
+                        <option value="2">Dar es Salaam</option>
+                    </select>
+                </div>
+                <!-- Time Dropdown -->
+                <div class="form-group">
+                    <label for="time" class="form-label text-danger">Time</label>
+                    <select id="time" class="form-select">
+                        <option selected>Any date</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="evening">Evening</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+</div>
+
+
+
+<div class="container py-4">
+  <!-- Top Section: Title and Dropdown Filters -->
+  <div class="row align-items-center mb-4">
+      <!-- Left: Upcoming Events Title -->
+      <div class="col-md-6">
+          <h2 class="fw-bold">Upcoming Events</h2>
+      </div>
+      <!-- Right: Dropdown Filters -->
+      <div class="col-md-6 d-flex justify-content-end">
+          <!-- Weekdays Dropdown -->
+          <div class="me-2">
+              <label for="weekdays" class="form-label d-block">Weekdays</label>
+              <select id="weekdays" class="form-select">
+                  <option value="all">All</option>
+                  <option value="weekday">Weekdays</option>
+                  <option value="weekend">Weekends</option>
+              </select>
           </div>
+          <!-- Event Type Dropdown -->
+          <div class="me-2">
+              <label for="eventType" class="form-label d-block">Event Type</label>
+              <select id="eventType" class="form-select">
+                  <option value="all">All</option>
+                  <option value="talk">Talk</option>
+                  <option value="hackathon">Hackathon</option>
+              </select>
+          </div>
+          <!-- Category Dropdown -->
+          <div>
+              <label for="category" class="form-label d-block">Category</label>
+              <select id="category" class="form-select">
+                  <option value="all">All</option>
+                  <option value="technology">Technology</option>
+                  <option value="education">Education</option>
+              </select>
+          </div>
+      </div>
+  </div>
+
+  <!-- Events Grid -->
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <!-- Event Card -->
+  <div class="col">
+    <div class="card text-center position-relative" style="border: none;">
+        <!-- Image with Overlay -->
+        <div class="position-relative" style="height: 200px;">
+            <!-- Image as Background -->
+            <div class="w-100 h-100" style="background-image: url('{% static "mzumbepycon/images/JTM_7346.jpg" %}'); background-size: cover; background-position: center; border-radius: 8px;">
+                <!-- Overlay -->
+                <div class="w-100 h-100 bg-dark bg-opacity-50" style="border-radius: 8px;"></div>
+                <!-- Month and Date Positioned at Bottom Left -->
+                <div class="position-absolute bottom-0 start-0 px-3 py-2 text-light">
+                    <h5 class="fw-bold mb-0" style="color: yellow;">April</h5>
+                    <h1 class="display-4 fw-bold mb-0" style="color: yellow;">18</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Name and Description outside the card -->
+        <div class="mt-2">
+            <h5 class="fw-bold">Django Girls Workshop</h5>
+            <p class="card-text">A session to learn, connect and have a fun time with like-minded ladies.</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card text-center position-relative " style="border: none;">
+        <!-- Image with Overlay -->
+        <div class="position-relative" style="height: 200px;">
+            <!-- Image as Background -->
+            <div class="w-100 h-100" style="background-image: url('{% static "mzumbepycon/images/JTM_7346.jpg" %}'); background-size: cover; background-position: center; border-radius: 8px;">
+                <!-- Overlay -->
+                <div class="w-100 h-100 bg-dark bg-opacity-50" style="border-radius: 8px;"></div>
+                <!-- Month and Date Positioned at Bottom Left -->
+                <div class="position-absolute bottom-0 start-0 px-3 py-2 text-light">
+                    <h5 class="fw-bold mb-0" style="color: yellow;">April</h5>
+                    <h1 class="display-4 fw-bold mb-0" style="color: yellow;">18</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Name and Description outside the card -->
+        <div class="mt-2">
+            <h5 class="fw-bold">Django Girls Workshop</h5>
+            <p class="card-text">A session to learn, connect and have a fun time with like-minded ladies.</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card text-center position-relative" style="border: none;">
+        <!-- Image with Overlay -->
+        <div class="position-relative" style="height: 200px;">
+            <!-- Image as Background -->
+            <div class="w-100 h-100" style="background-image: url('{% static "mzumbepycon/images/JTM_7346.jpg" %}'); background-size: cover; background-position: center; border-radius: 8px;">
+                <!-- Overlay -->
+                <div class="w-100 h-100 bg-dark bg-opacity-50" style="border-radius: 8px;"></div>
+                <!-- Month and Date Positioned at Bottom Left -->
+                <div class="position-absolute bottom-0 start-0 px-3 py-2 text-light">
+                    <h5 class="fw-bold mb-0" style="color: yellow;">April</h5>
+                    <h1 class="display-4 fw-bold mb-0" style="color: yellow;">18</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Name and Description outside the card -->
+        <div class="mt-2">
+            <h5 class="fw-bold">Django Girls Workshop</h5>
+            <p class="card-text">A session to learn, connect and have a fun time with like-minded ladies.</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card text-center position-relative" style="border: none;">
+        <!-- Image with Overlay -->
+        <div class="position-relative" style="height: 200px; border: none;">
+            <!-- Image as Background -->
+            <div class="w-100 h-100" style="background-image: url('{% static "mzumbepycon/images/JTM_7346.jpg" %}'); background-size: cover; background-position: center; border-radius: 8px;">
+                <!-- Overlay -->
+                <div class="w-100 h-100 bg-dark bg-opacity-50" style="border-radius: 8px;"></div>
+                <!-- Month and Date Positioned at Bottom Left -->
+                <div class="position-absolute bottom-0 start-0 px-3 py-2 text-light">
+                    <h5 class="fw-bold mb-0" style="color: yellow;">April</h5>
+                    <h1 class="display-4 fw-bold mb-0" style="color: yellow;">18</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Name and Description outside the card -->
+        <div class="mt-2">
+            <h5 class="fw-bold">Django Girls Workshop</h5>
+            <p class="card-text">A session to learn, connect and have a fun time with like-minded ladies.</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card text-center position-relative" style="border: none;">
+        <!-- Image with Overlay -->
+        <div class="position-relative" style="height: 200px; border: none;">
+            <!-- Image as Background -->
+            <div class="w-100 h-100" style="background-image: url('{% static "mzumbepycon/images/JTM_7346.jpg" %}'); background-size: cover; background-position: center; border-radius: 8px;">
+                <!-- Overlay -->
+                <div class="w-100 h-100 bg-dark bg-opacity-50" style="border-radius: 8px;"></div>
+                <!-- Month and Date Positioned at Bottom Left -->
+                <div class="position-absolute bottom-0 start-0 px-3 py-2 text-light">
+                    <h5 class="fw-bold mb-0" style="color: yellow;">April</h5>
+                    <h1 class="display-4 fw-bold mb-0" style="color: yellow;">18</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Name and Description outside the card -->
+        <div class="mt-2">
+            <h5 class="fw-bold">Django Girls Workshop</h5>
+            <p class="card-text">A session to learn, connect and have a fun time with like-minded ladies.</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card text-center position-relative" style="border: none;">
+        <!-- Image with Overlay -->
+        <div class="position-relative" style="height: 200px; border: none;">
+            <!-- Image as Background -->
+            <div class="w-100 h-100" style="background-image: url('{% static "mzumbepycon/images/JTM_7346.jpg" %}'); background-size: cover; background-position: center; border-radius: 8px;">
+                <!-- Overlay -->
+                <div class="w-100 h-100 bg-dark bg-opacity-50" style="border-radius: 8px;"></div>
+                <!-- Month and Date Positioned at Bottom Left -->
+                <div class="position-absolute bottom-0 start-0 px-3 py-2 text-light">
+                    <h5 class="fw-bold mb-0" style="color: yellow;">April</h5>
+                    <h1 class="display-4 fw-bold mb-0" style="color: yellow;">18</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Name and Description outside the card -->
+        <div class="mt-2">
+            <h5 class="fw-bold">Django Girls Workshop</h5>
+            <p class="card-text">A session to learn, connect and have a fun time with like-minded ladies.</p>
+        </div>
+    </div>
+  </div>
+
+
+ 
+  
+  <div class="card p-4 mt-5 w-100">
+    <!-- Heading -->
+    <div class="text-center mb-4">
+      <h5 class="fw-bold">Our Sponsors</h5>
+    </div>
+  
+    <!-- Logos -->
+    <div class="container-fluid">
+      <!-- First Row: 4 Logos -->
+      <div class="row text-center mb-3">
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+          <img src="{% static 'path/to/logo1.png' %}" class="img-fluid" alt="Sponsor 1 Logo">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+          <img src="{% static 'path/to/logo2.png' %}" class="img-fluid" alt="Sponsor 2 Logo">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+          <img src="{% static 'path/to/logo3.png' %}" class="img-fluid" alt="Sponsor 3 Logo">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+          <img src="{% static 'path/to/logo4.png' %}" class="img-fluid" alt="Sponsor 4 Logo">
+        </div>
+      </div>
+  
+      <!-- Second Row: 3 Logos -->
+      <div class="row text-center">
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-3">
+          <img src="{% static 'path/to/logo5.png' %}" class="img-fluid" alt="Sponsor 5 Logo">
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-3">
+          <img src="{% static 'path/to/logo6.png' %}" class="img-fluid" alt="Sponsor 6 Logo">
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-3">
+          <img src="{% static 'path/to/logo7.png' %}" class="img-fluid" alt="Sponsor 7 Logo">
         </div>
       </div>
     </div>
   </div>
+
+
+
+  <footer class="footer bg-light py-4">
+    <div class="container-fluid">
+      <!-- Row for the main content -->
+      <div class="row">
+        <!-- Left Section -->
+        <div class="col-md-3 text-center text-md-start mb-4">
+          <div class="logo-section">
+            <h2>Logo</h2>
+            <p>
+              Address:<br>
+              123 Main Street, City<br>
+              State Province, Country
+            </p>
+            <a href="#" class="me-2"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="me-2"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+  
+        <!-- Middle Section -->
+        <div class="col-md-3 text-center text-md-start mb-4">
+          <ul class="list-unstyled">
+            <h3>Column One</h3>
+            <li><a href="#">Link One</a></li>
+            <li><a href="#">Link Two</a></li>
+            <li><a href="#">Link Three</a></li>
+            <li><a href="#">Link Four</a></li>
+          </ul>
+        </div>
+  
+        <!-- Right Sections -->
+        <div class="col-md-3 text-center text-md-start mb-4">
+          <ul class="list-unstyled">
+            <h3>Column Two</h3>
+            <li><a href="#">Link Five</a></li>
+            <li><a href="#">Link Six</a></li>
+            <li><a href="#">Link Seven</a></li>
+            <li><a href="#">Link Eight</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-3 text-center text-md-start mb-4">
+          
+          <ul class="list-unstyled">
+            <h3>Column Three</h3>
+            <li><a href="#">Link Nine</a></li>
+            <li><a href="#">Link Ten</a></li>
+            <li><a href="#">Link Eleven</a></li>
+            <li><a href="#">Link Twelve</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Footer Bottom -->
+      <div class="row mt-4">
+        <div class="col text-center">
+          <p class="mb-0">
+            © 2024 Your Website. All rights reserved.
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
   
