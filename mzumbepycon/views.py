@@ -11,7 +11,7 @@ def homepage(request):
 def about(request):
     return render(request, 'about.html')
 
-def MUchapter(request):
+def Index(request):
     return render(request,'MUchapter.html')
 
 def Adminpage(request):
