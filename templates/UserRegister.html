@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pycon Mzumbe</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'mzumbepycon/fontawesome/css/all.min.css' %}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-bg: #D9D9D9;
+            --secondary-bg: #CDC2A5;
+            --primary-color: darkorange;
+            --hover-bg: #310202;
+            --sidebar-bg: #155B7A;
+            --footer-bg: #ffffff;
+        }
+
+        .same-height {
+            height: 100vh;
+            object-fit: cover;
+            border-radius: 5px;
+          }
+        
+          /* Style the overlay text */
+          .overlay-text {
+            position: relative;
+            top: -70%;      /* Center vertically */
+            left: 50%;     /* Center horizontally */
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+            text-align: center;
+          }
+        
+          .position-relative {
+            border-radius: 5px;
+            overflow: hidden; /* Ensure text stays inside the container */
+          }
+          a.no-underline {
+            text-decoration: none; /* Removes the underline */
+        }
+        .form-control {
+          transition: border-color 0.3s ease-in-out;
+        }
+        
+        .form-control:hover {
+          border-color: #007bff; /* Change border color on hover */
+          box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* Add a glowing effect */
+        }
+        .news-ticker {
+          white-space: nowrap;
+          overflow: hidden;
+          display: block;
+      }
+      
+      .news-ticker p {
+          display: inline-block;
+          animation: ticker 10s linear infinite;
+      }
+      
+      @keyframes ticker {
+          from { transform: translateX(100%); }
+          to { transform: translateX(-100%); }
+      }
+    </style> 
+</head>
+
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:white;">
+    <div class="container">
+      <!-- Logo on the Left -->
+      
+   
+      
+  
+      <!-- Navbar Toggle Button (for mobile view) -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Links and Login Button -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'MUchapter'%}">Home</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'homepage'%}">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'code_of_conduct'%}">Code Of Conduct</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Login'%}">Admin</a>
+          </li>
+        </ul>
+        <div class="ms-3">
+          <a class="btn btn-outline-primary" href="{%url 'UserRegistration'%}" role="button">Become a Member </a>
+        </div>
+      
+    </div>
+  </nav>
+        
+              <div class="row" style="padding: 30px; margin:30px;">
+                <div class="news-ticker">
+                  <p class="display-6 strong" style="color:#fc8d67;"><b>🌟Welcome to our community,Register now and be part of something great.🌟</b></p>
+              </div>
+            
+            <div class="col-6">
+                <div class="image-container">
+                    <a class="no-underline" >
+                      <img src="{% static 'mzumbepycon/images/i-cgKJ3vG-M.jpg'%}" class="img-fluid same-height" style="width:100%;">
+                     
+                    </a>
+                   
+                  </div>
+                </div>
+       
+
+            <!-- Registration Form -->
+            <div class="col-6">
+                <h3 class="text-center" style="color:#87ceeb ">Register Here</h3>
+                <form method="post" class="mx-5"enctype="multipart/form-data" >
+                    {% csrf_token %}
+                    <div class="row mb-3 ">
+                        <label for="id_fullname" class="form-label d-flex start">Full Name:</label>
+                        {{ form.fullname }}
+                        {{ form.fullname.errors }}
+                    </div>
+                    <div class="row mb-3  ">
+                        <label for="id_course" class="form-label d-flex start">Course:</label>
+                        {{ form.Course }}
+                        {{ form.Course.errors }}
+                    </div>
+                    <div class=" row mb-3">
+                        <label for="id_year" class="form-label d-flex start">Year:</label>
+                        {{ form.year }}
+                        {{ form.year.errors }}
+                    </div>
+                    <div class="row mb-3">
+                        <label for="id_experience" class="form-label d-flex start">Experience:</label>
+                        {{ form.Experience }}
+                        {{ form.Experience.errors }}
+                    </div>
+                    <div class=" row mb-3">
+                        <label for="id_phone"  class="form-label d-flex start" placeolder="Phone e.g:0732456879;">Phone:</label>
+                        {{ form.Phone }}
+                        {{ form.Phone.errors }}
+                    </div>
+                    <div class="row mb-3">
+                        <label for="id_email" class="form-label d-flex start">Email:</label>
+                        {{ form.Email }}
+                        {{ form.Email.errors }}
+                    </div>
+                    <div class=" row mb-3">
+                        <label for="id_student_id" class="form-label d-flex start">Student ID:</label>
+                        {{ form.Student_ID }}
+                        {{ form.Student_ID.errors }}
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="button" style="background-color: #87ceeb; border-radius: 5px; border-color:#87ceeb; font-size:x-large;">Register</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+       
+    </div>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

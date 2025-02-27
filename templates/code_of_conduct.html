@@ -1,0 +1,256 @@
+
+{% load static %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PyCon Tanzania{% endblock %}</title>
+    
+    <!-- Bootstrap CSS (Optional, for styling) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    
+    
+</head>
+<body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
+   
+
+</style>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:white;">
+    <div class="container">
+      <!-- Logo on the Left -->
+      
+   
+      
+  
+      <!-- Navbar Toggle Button (for mobile view) -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Links and Login Button -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'MUchapter'%}">Home</a>
+              </li>
+            
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'homepage'%}">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'code_of_conduct'%}">Code Of Conduct</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Login'%}">Admin</a>
+          </li>
+        </ul>
+        <div class="ms-3">
+          <a class="btn btn-outline-primary" href="{%url 'UserRegistration'%}" role="button">Become a Member </a>
+        </div>
+      
+    </div>
+  </nav>
+
+
+
+<div class="container" style="padding:40px;">
+  
+    
+    <h1 class="text-center mt-4 " style="color: #87CEEB ">Code of Conduct</h1>
+ 
+        <div class="card-body" style="font-family: 'Times New Roman', Times, serif;font-size:20px;">
+
+    <p >
+        Participants are expected to contribute to an environment that is open, welcoming, considerate, and respectful.
+    </p>
+
+    <p>
+        We require that all attendees - delegates, speakers, volunteers, sponsors, organizers, and participants - have an enjoyable experience during all Pycon events.
+        All attendees are expected to show respect and courtesy to one another throughout all Pycon events. This includes social events whether officially sponsored by Pycon Tanzania or not.
+    </p>
+</div>
+
+
+    <h2  style="color: #87CEEB">Communication</h2>
+    <div class="card">
+        <div class="card-body" style="font-family: 'Times New Roman', Times, serif;font-size:20px;">
+    <p>
+        All communication should be appropriate for a general audience, which will include people from many different religions, cultures, and nations.
+    </p>
+    <p>
+        Sexual language and imagery are not welcome. Please be thoughtful when making jokes or discussing sensitive topics or issues that are likely to have strong personal effects on some people.
+        If in doubt, ask for advice or simply moderate your expression.
+    </p>
+</div>
+</div>
+
+    <h2  style="color: #87CEEB">Harassment</h2>
+    <div class="card">
+        <div class="card-body" style="font-family: 'Times New Roman', Times, serif;font-size:20px;">
+          
+               
+                
+    <p>Harassment can include any unwelcome behavior directed at another person. Pycon Tanzania will not tolerate behavior that includes:</p>
+
+            
+    <ul>
+        <table class="table" style="font-family: 'Times New Roman', Times, serif;font-size:20px;">
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+       <td> Harassment in any form, or language</td></tr>
+
+            <tr>       
+        <td>Sexist, racist, or exclusionary behavior</td>
+            </tr>
+            <tr>
+        <td>Intimidating or threatening actions</td>
+            </tr>
+            <tr>
+        <td>Insulting or unpleasant behavior</td>
+            </tr>
+        
+</table>   
+            
+    </ul>
+
+</div>
+</div>
+
+    <h2  style="color: #87CEEB">Report a Misconduct</h2>
+   
+    <div class="card">
+        <div class="card-body">
+           
+            <table class="table" style="font-family: 'Times New Roman', Times, serif;font-size:20px;">  
+    <tr>
+        <td>
+        If you are troubled by the conduct of another attendee at the conference or are concerned that another attendee may be in distress,
+        please speak immediately to any member of the secretariat. Your concern will be heard in confidence and taken seriously, and the secretariat,
+        volunteers, and organizers will be on hand throughout the event.
+        </td>
+    </tr>
+
+
+    <td>Any concern, whatever it is, will be immediately investigated promptly, and if necessary, appropriate action will be taken. This could include:</td>
+    <ul>
+        <tr>
+        <td>Asking the violator of the CoC to leave the event immediately</td>
+        </tr>
+        <tr>
+        <td>Informing the Python Software Foundation about the incident</td>
+        </tr>
+        <tr>
+        <td>Informing the law enforcement authority about the incident</td>
+        </tr>
+    </ul>
+    <tr>
+
+    <td>
+        To ensure transparency, we will publish a report after the conference containing an anonymized report of the incidents that violated the CoC.
+    </td>
+</tr>
+<tr>
+
+    <td>Report any incident to <a href="mailto:secretariat@pycon.or.tz">secretariat@pycon.or.tz</a> 
+        Thank you for helping to make Pycon Tanzania a welcoming and friendly community for all.</td>
+</tr>
+
+<table>
+
+</div>
+</div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+   
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</body>
+<footer class="footer bg-light mt-5">
+    <div class="container-fluid" style="background-color: #fdca9b;">
+        <div class="container py-4">
+            <div class="row">
+                <!-- Left Section -->
+                <div class="col-md-3 text-center text-md-start mb-4">
+                    <div class="logo-section">
+                        <p class="fw-bold">Disclaimer</p>
+                        <p>Pycon Mzumbe follows other Python conferences | Organized by the Python User Group</p>
+                    </div>
+                </div>
+  
+                <!-- Middle Section -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Our Community</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark text-decoration-none">About Us</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none">Open Source Projects</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none">Code of Conduct</a></li>
+                    </ul>
+                </div>
+  
+                <!-- Right Section -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Other Uni Chapters</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark text-decoration-none">UDSM Chapter</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none">Ardhi Chapter</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none">IAA Chapter</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none">DIT Chapter</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none">SUZA Chapter</a></li>
+                    </ul>
+                </div>
+  
+                <!-- Follow Us Section -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Follow Us</h5>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <a href="#"><img src="{% static 'mzumbepycon/images/facebook.png' %}" alt="Facebook" class="img-fluid social-icon" style="width: 30px;"></a>
+                        </div>
+                        <div class="col-6 mb-2">
+                            <a href="#"><img src="{% static 'mzumbepycon/images/youtube.png' %}" alt="YouTube" class="img-fluid social-icon" style="width: 30px;"></a>
+                        </div>
+                        <div class="col-6 mb-2">
+                            <a href="#"><img src="{% static 'mzumbepycon/images/linkedin.png' %}" alt="LinkedIn" class="img-fluid social-icon" style="width: 30px;"></a>
+                        </div>
+                        <div class="col-6 mb-2">
+                            <a href="#"><img src="{% static 'mzumbepycon/images/twitter.png' %}" alt="Twitter" class="img-fluid social-icon" style="width: 30px;"></a>
+                        </div>
+                        <div class="col-6 mb-2">
+                            <a href="#"><img src="{% static 'mzumbepycon/images/instagram.png' %}" alt="Instagram" class="img-fluid social-icon" style="width: 30px;"></a>
+                        </div>
+                        <div class="col-6 mb-2">
+                            <a href="#"><img src="{% static 'mzumbepycon/images/email.png' %}" alt="Gmail" class="img-fluid social-icon" style="width: 30px;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+</html>
