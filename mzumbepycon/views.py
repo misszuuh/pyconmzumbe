@@ -12,7 +12,7 @@ def about(request):
     return render(request, 'about.html')
 
 def Index(request):
-    return render(request,'MUchapter.html')
+    return render(request,'Index.html')
 
 def Adminpage(request):
     if request.method == 'GET':
