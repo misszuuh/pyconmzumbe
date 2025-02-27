@@ -1,0 +1,783 @@
+
+{% load static %}
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pycon Mzumbe</title>
+
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'mzumbepycon/fontawesome/css/all.min.css' %}">
+   
+    \
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+   <style>
+ 
+  
+
+  
+  
+  
+  .slider-description {
+      text-align: center;
+      color: red;
+      margin-top: 200px;
+      font-size: 24px;
+  }
+  .swiper {
+    width: 70%;
+    height: 400px;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .swiper-slide img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 2px;
+  }
+  
+  .testimonial {
+    background-color:#87ceeb;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+.profile-img {
+    width: 200px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.testimonial-text {
+    font-size: 18px;
+    font-style: italic;
+}
+.profile-img1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  color:#87ceeb;
+}
+
+   </style> 
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:white;">
+    <div class="container">
+      <!-- Logo on the Left -->
+      
+   
+      
+  
+      <!-- Navbar Toggle Button (for mobile view) -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Links and Login Button -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'MUchapter'%}">Home</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'homepage'%}">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'code_of_conduct'%}">Code Of Conduct</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Login'%}">Admin</a>
+          </li>
+        </ul>
+        <div class="ms-3">
+          <a class="btn btn-outline-primary" href="{%url 'UserRegistration'%}" role="button">Become a Member </a>
+        </div>
+      
+    </div>
+  </nav>
+   
+ 
+
+<body style="">
+ 
+  <div class="row">
+      
+      
+  
+      <div class="col-2 ">
+        <img src="{% static 'mzumbepycon/images/pyconlogo.png'%}" style="width:100%;margin-top:30px; ">
+           
+      </div>
+      <div class="col-10">
+        
+        <img src="{% static 'mzumbepycon/images/logo-main.png'%}" style="width:100%;margin-top:40px;  ">
+        
+  
+    </div>
+   
+    
+  
+  </div>
+    
+  
+  
+    
+    
+        
+  
+    
+  
+   
+  
+  
+  </div>
+
+  
+
+  
+ 
+    <div class="row"style="padding:0px;background-image:url('{% static 'mzumbepycon/images/Abstruct.jpg'%}');">
+    
+      <h1 class="display-3 customer heading"><b>PYCON MZUMBE UNIVERSITY</b></h1>
+    
+
+      <div class='col-12 col-md-4 col-sm-3 mb-3' style="padding:25px;">
+      
+            <img src="{% static 'mzumbepycon/images/pyconlogo.png'%}" style="width:50%; margin-left:100px; ">
+
+       
+            <h3>Join the PyCon Mzumbe Community!</h3>
+
+           
+        <p>Welcome! We invite you to explore our community. Check out the YouTube video that provides details about the university's chapter and what the PyCon Chapter is all about.</p>
+        <a href="https://www.youtube.com/@pycontanzania"><img src="{% static 'mzumbepycon/images/youtube.png'%}" style="width:20%; margin-left:150px;"></a>
+
+      
+     
+      
+       
+      </div>
+
+      
+      <div class='col-12 col-md-4 col-sm-3 mb-3' style="">
+      
+         
+        <div class="row">  
+          
+
+          <div class="col-1">
+              <img src="{% static 'mzumbepycon/images/.png' %}" class="img-fluid" style="width: 30%;height:100%; margin-top:10px;background-color:black;">
+          </div>
+          <div class="col-11">
+            <img src="{% static 'mzumbepycon/images/djnew.png'%}" style="width:50%; margin-left:100px;">
+            <h3> Welcome to the DjangoGirls Mzumbe Community!</h3>
+
+            <p> We’re excited to have you here! This is a great place to connect and grow together. We invite you to watch our YouTube video, where you’ll learn more about our university chapter and everything the DjangoGirls Chapter has to offer. Come join us in exploring new opportunities!</p>
+     <a href="https://www.youtube.com/results?search_query=djangogirls+tanzania"><img src="{% static 'mzumbepycon/images/youtube.png'%}"  style="width:20%; margin-left : 150px; margin-bottom:20px;"></a>
+     
+        </div>
+      </div>
+        
+  
+      </div>
+   
+      <div class='col-12 col-md-4 col-sm-3 mb-3'>
+        <img src="{% static 'mzumbepycon/images/JTM_7346.jpg'%}" style="width:90%; ">
+   
+      
+
+      
+          
+    </div>
+  </div>
+  <div class="container">
+  <div class="row"style="padding:10px;margin:0px;border:">
+    <div class="row">  
+          
+
+      <div class="col-2 col-sm-2">
+        <img src="{% static 'mzumbepycon/images/LOGO MZUMBE_042618.png'%}" style="width:100%; "> </div>
+      <div class="col-2">
+        <img src="{% static 'mzumbepycon/images/pyconlogo.png'%}" style="width:100%; ">
+
+  
+    </div>
+    <div class="col-2">
+      <img src="{% static 'mzumbepycon/images/djangologo.png'%}" style="width:100%;margin-top:10px; ">
+
+    </div>
+  <div class="col-2">
+    <img src="{% static 'mzumbepycon/images/bnrylogo.png'%}" style="width:100%; margin-top:25px;">
+
+
+</div>
+<div class="col-2">
+  <img src="{% static 'mzumbepycon/images/subcode.png'%}" style="width:100%; margin-top:25px; ">
+</div>
+<div class="col-2">
+  <img src="{% static 'mzumbepycon/images/irabulogo.svg'%}" style="width:100%; ">
+    
+
+
+</div>
+  </div>
+    
+
+  
+    
+    
+        
+  
+    
+ 
+   
+
+  
+  </div>
+  <br><br>
+  <div class="row"style="padding:0px;">
+    
+
+  
+    <div class='col-12 col-md-5 col-sm-3 mb-3'>
+     <h1> What Can You Expect from the Chapter?</h1>
+The chapter conducts its activities through a variety of workshops and talks, designed for participants from both Python and DjangoGirls communities.
+        
+  </div>
+  <div class="col-12 col-md-7 col-sm-3 mb-3">
+    <div class="row">
+        <div class="col-3">
+            <img src="{% static 'mzumbepycon/images/pyconlogo.png' %}" class="img-fluid" style="width: 100%;">
+        </div>
+        <div class="col-9">
+            <h5>Workshop</h5>
+            <p>
+                This section provides an overview of the Pycon workshops, detailing the format, expectations for 
+                attendees, and the frequency with which they are held during the academic year.
+            </p>
+        </div>
+        <div class="row">
+          <div class="col-12">
+              <img src="{% static 'mzumbepycon/images/line2.png' %}" class="img-fluid" style="width: 100%;">
+          
+      </div>
+
+
+
+  <div class="row">
+      <div class="col-3">
+          <img src="{% static 'mzumbepycon/images/pyconlogo.png' %}" class="img-fluid" style="width: 100%;">
+      </div>
+      <div class="col-9">
+        <h5>Talk</h5>
+
+        <p>This section outlines the structure of Pycon talks, what participants can anticipate when attending, and how often these talks occur throughout the academic year.</p>
+      </div>
+  </div>
+</div>
+
+      </div>
+    
+ 
+  </div>
+  </div>
+</div>
+</div>
+ <br>
+    
+   
+  
+
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="{% static 'mzumbepycon/images/JTM_7725.jpg' %}"  alt="Slide 1">
+    </div>
+    <div class="swiper-slide">
+      <img src="{% static 'mzumbepycon/images/JTM_1798.jpg' %}" alt="Slide 2">
+    </div>
+    <div class="swiper-slide">
+      <img src="{% static 'mzumbepycon/images/JTM_1923.jpg' %}" alt="Slide 3">
+    </div>
+    <div class="swiper-slide">
+      <img src="{% static 'mzumbepycon/images/JTM_1945.jpg' %}" alt="Slide 4">
+    </div>
+    <div class="swiper-slide">
+      <img src="{% static 'mzumbepycon/images/JTM_1868.jpg' %}"  alt="Slide 1">
+    </div>
+    <div class="swiper-slide">
+      <img src="{% static 'mzumbepycon/images/JTM_0802.jpg' %}" alt="Slide 2">
+    </div>
+    <div class="swiper-slide">
+      <img src="{% static 'mzumbepycon/images/JTM_0523.jpg' %}" alt="Slide 3">
+    </div>
+    <div class="swiper-slide">
+      <img src="{% static 'mzumbepycon/images/JTM_0578.jpg' %}" alt="Slide 4">
+    </div>
+    <div class="swiper-slide">
+      <img src="{% static 'mzumbepycon/images/JTM_7658.jpg' %}" alt="Slide 2">
+    </div>
+    <div class="swiper-slide">
+      <img src="{% static 'mzumbepycon/images/JTM_7641.jpg' %}" alt="Slide 3">
+    </div>
+    <div class="swiper-slide">
+      <img src="{% static 'mzumbepycon/images/JTM_7343.jpg' %}" alt="Slide 4">
+    </div>
+  </div>
+  
+  <!-- Pagination & Navigation -->
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    slidesPerView: 2,
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+   
+    coverflowEffect: {
+      rotate: 10,
+      stretch: 0,
+      depth: 10,
+      modifier: 8,
+      slideShadows: true,
+    },
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  
+</script>
+<div class="container mt-5">
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <div class="row d-flex align-items-center testimonial">
+                  <div class="col-md-8">
+                      <p class="testimonial-text">""During my final year at Mzumbe, I attended the 2024 Annual Python Conference in Tanzania. I learned how to build real-time applications with Django, and I connected with experienced backend developers.""</p>
+                      <h5><strong>Chapter Leader/Developer</strong></h5>
+                      <p>Graduant 2025</p>
+                  </div>
+                  <div class="col-md-4 text-center">
+                      <img src="{% static 'mzumbepycon/images/Zubeda.jpeg'%}"alt="Profile Image" class="profile-img">
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <div class="row d-flex align-items-center testimonial">
+                  <div class="col-md-8">
+                      <p class="testimonial-text">"In the beginning of my third year at Mzumbe, I spoke at the 2024 Annual Python Conference in Tanzania. I spoke about UI/UX Wireframing, and through that I met professionals in that field."</p>
+                      <h5><strong>UI/UX Designer/Chapter Leader</strong></h5>
+                      <p>Graduant 2025</p>
+                  </div>
+                  <div class="col-md-4 text-center">
+                      <img src="{% static 'mzumbepycon/images/Martha.jpg'%}" alt="Profile Image" class="profile-img">
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row d-flex align-items-center testimonial">
+                <div class="col-md-8">
+                    <p class="testimonial-text">""As a student at Mzumbe, I joined the 2024 PyCon Tanzania. I participated in workshops on mobile app development with KivyMD, which inspired me to start building my own app."
+
+                      "</p>
+                    <h5><strong>Developer</strong></h5>
+                    <p>Graduant 2025</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="{% static 'mzumbepycon/images/mine.jpg'%}" alt="Profile Image" class="profile-img">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row d-flex align-items-center testimonial">
+              <div class="col-md-8">
+                  <p class="testimonial-text">""As a first year student at Mzumbe, I attended the 2024 PyCon Tanzania. I explored Python for cybersecurity and ethical hacking, and I met industry experts who encouraged me to pursue ethical hacking certifications.""</p>
+                  <h5><strong>Django girl Member</strong></h5>
+                  <p>Graduant 2027</p>
+              </div>
+              <div class="col-md-4 text-center">
+                  <img src="{% static 'mzumbepycon/images/iffah.jpg'%}" alt="Profile Image" class="profile-img">
+              </div>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row d-flex align-items-center testimonial">
+            <div class="col-md-8">
+                <p class="testimonial-text">"At the start of my first year at Mzumbe, I participated in the 2024 Python Conference in Tanzania. I discovered Git and GitHub best practices, which helped me contribute to open-source projects.""</p>
+                <h5><strong>MUchapter Member</strong></h5>
+                <p>Graduant 2027</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="{% static 'mzumbepycon/images/Ommy.jpg'%}" alt="Profile Image" class="profile-img">
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row d-flex align-items-center testimonial">
+          <div class="col-md-8">
+              <p class="testimonial-text">""At the start of my third year at Mzumbe, I attended the 2024 Python Conference in Tanzania. I learned about data visualization with Matplotlib and Plotly, and I met data scientists who helped me improve my skills.""</p>
+              <h5><strong>MUchapter Member</strong></h5>
+              <p>Graduant 2025</p>
+          </div>
+          <div class="col-md-4 text-center">
+              <img src="{% static 'mzumbepycon/images/willy.jpg'%}" alt="Profile Image" class="profile-img">
+          </div>
+      </div>
+  </div>
+  <div class="carousel-item">
+    <div class="row d-flex align-items-center testimonial">
+        <div class="col-md-8">
+            <p class="testimonial-text">""During my first year at Mzumbe, I joined the 2024 PyCon Tanzania. I learned about IoT with MicroPython and worked on a project that integrates Python with smart home devices."</p>
+            <p>Graduant 2027</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="{% static 'mzumbepycon/images/jaa.png'%}" alt="Profile Image" class="profile-img">
+        </div>
+    </div>
+</div>
+<div class="carousel-item">
+  <div class="row d-flex align-items-center testimonial">
+      <div class="col-md-8">
+          <p class="testimonial-text">""In my third year at Mzumbe, I participated in the 2024 PyCon Tanzania. I gained knowledge on web scraping with BeautifulSoup and Scrapy, which I later used to automate data collection for my research project.""</p>
+          <h5><strong>MUchapter Member</strong></h5>
+          <p>Graduant 2025</p>
+      </div>
+      <div class="col-md-4 text-center">
+          <img src="{% static 'mzumbepycon/images/rechal.png'%}" alt="Profile Image" class="profile-img">
+      </div>
+  </div>
+</div>
+<div class="carousel-item">
+  <div class="row d-flex align-items-center testimonial">
+      <div class="col-md-8">
+          <p class="testimonial-text">""As a final-year student at Mzumbe, I attended the 2024 Python Conference in Tanzania. I explored machine learning with Scikit-learn, and I met AI professionals who guided me on my first ML project.""</p>
+          <h5><strong>MUchapter Member</strong></h5>
+          <p>Graduant 2025</p>
+      </div>
+      <div class="col-md-4 text-center">
+          <img src="{% static 'mzumbepycon/images/marry.jpg'%}" alt="Profile Image" class="profile-img">
+      </div>
+  </div>
+</div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+</div>
+  
+
+
+
+
+<h1 class="text-center dispaly-3 customer heading">MEET OUR TEAM</h1>
+<div class="row"style="padding:0px;margin:0px;background-color:">
+  <div class="row">  
+    <div class="col-2">
+    </div>
+    
+    <div class="col-3 ">
+      <img src="{% static 'mzumbepycon/images/Martha.jpg'%}" alt="Profile Image" class="profile-img1">
+      <h5>UI/UX Design&Chapter Leader</h5>
+      <p>Martha Adolph</p>
+  </div>
+  <div class="col-3 ">
+    <img src="{% static 'mzumbepycon/images/iffah.jpg'%}" alt="Profile Image" class="profile-img1">
+    <h5>Mentor</h5>
+    <p>Ifaadati Hamad</p>
+</div>
+<div class="col-3 ">
+  <img src="{% static 'mzumbepycon/images/Zubeda.jpeg'%}" alt="Profile Image" class="profile-img1">
+  <h5>Developer&Chapter Leader</h5>
+  <p>Zubeda Nurdin</p>
+</div>
+
+   
+    
+
+ 
+ 
+    
+  </div>
+
+</div>
+  
+<div class="row"style="padding:10px;margin:0px;background-color:">
+  <div class="row">  
+    <div class="col-2">
+    </div>
+    
+    <div class="col-3 ">
+      <img src="{% static 'mzumbepycon/images/Picsart_25-02-25_12-46-31-070.jpg'%}" alt="Profile Image" class="profile-img1">
+      <h5>Mentor</h5>
+      <p>James</p>
+  </div>
+  <div class="col-3 ">
+    <img src="{% static 'mzumbepycon/images/mine.jpg'%}" alt="Profile Image" class="profile-img1">
+    <h5>Developer</h5>
+    <p>Norbeth Vitus</p>
+</div>
+<div class="col-3 ">
+  <img src="{% static 'mzumbepycon/images/Ommy.jpg'%}" alt="Profile Image" class="profile-img1">
+  <h5>Mentor</h5>
+  <p>Omari</p>
+</div>
+
+   
+    
+
+ 
+ 
+    
+  </div>
+
+</div>
+  
+
+  
+
+
+  
+  
+      
+
+  
+
+ 
+
+
+
+  
+
+
+  
+  
+      
+
+  
+
+ 
+
+
+
+
+
+
+  
+  
+      
+
+  
+
+ 
+
+
+
+
+
+
+
+    
+
+<div class="row"style="padding:0px;background-color:">
+    
+  <div class='col-12 col-md-2 col-sm-3 mb-3' >
+  </div>
+  
+
+  <div class='col-12 col-md-3 col-sm-3 mb-3' >
+    <br>
+<div class="" style="">
+ <h3 style="text-align: center;">400+</h3>
+ <p style="text-align: center;">Student Members</p>
+</div>
+ 
+    
+  </div>
+  
+  <div class='col-12 col-md-3 col-sm-3 mb-3' >
+    <br>
+<div class="" style="">
+ <h3 style="text-align: center;">30+</h3>
+ <p style="text-align: center;">Alumni Members </p>
+</div>
+ 
+    
+  </div>
+
+  <div class='col-12 col-md-3 col-sm-3 mb-3' >
+    <br>
+<div class="" style="">
+ <h3 style="text-align: center;">5</h3>
+ <p style="text-align: center;">Facilitators</p>
+</div>
+ 
+    
+  </div>
+  <div class='col-12 col-md-4 col-sm-3 mb-3' >
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+</div>
+</body>
+
+<footer class="footer bg-light mt-5">
+  <div class="container-fluid" style="background-color: #fdca9b;">
+      <div class="container py-4">
+          <div class="row">
+              <!-- Left Section -->
+              <div class="col-md-3 text-center text-md-start mb-4">
+                  <div class="logo-section">
+                      <p class="fw-bold">Disclaimer</p>
+                      <p>Pycon Mzumbe follows other Python conferences | Organized by the Python User Group</p>
+                  </div>
+              </div>
+
+              <!-- Middle Section -->
+              <div class="col-md-3">
+                  <h5 class="fw-bold">Our Community</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#" class="text-dark text-decoration-none">About Us</a></li>
+                      <li><a href="#" class="text-dark text-decoration-none">Open Source Projects</a></li>
+                      <li><a href="#" class="text-dark text-decoration-none">Code of Conduct</a></li>
+                  </ul>
+              </div>
+
+              <!-- Right Section -->
+              <div class="col-md-3">
+                  <h5 class="fw-bold">Other Uni Chapters</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#" class="text-dark text-decoration-none">UDSM Chapter</a></li>
+                      <li><a href="#" class="text-dark text-decoration-none">Ardhi Chapter</a></li>
+                      <li><a href="#" class="text-dark text-decoration-none">IAA Chapter</a></li>
+                      <li><a href="#" class="text-dark text-decoration-none">DIT Chapter</a></li>
+                      <li><a href="#" class="text-dark text-decoration-none">SUZA Chapter</a></li>
+                  </ul>
+              </div>
+
+              <!-- Follow Us Section -->
+              <div class="col-md-3">
+                  <h5 class="fw-bold">Follow Us</h5>
+                  <div class="row mt-4">
+                      <div class="col-6">
+                          <a href="#"><img src="{% static 'mzumbepycon/images/facebook.png' %}" alt="Facebook" class="img-fluid social-icon" style="width: 30px;"></a>
+                      </div>
+                      <div class="col-6 mb-2">
+                          <a href="#"><img src="{% static 'mzumbepycon/images/youtube.png' %}" alt="YouTube" class="img-fluid social-icon" style="width: 30px;"></a>
+                      </div>
+                      <div class="col-6 mb-2">
+                          <a href="#"><img src="{% static 'mzumbepycon/images/linkedin.png' %}" alt="LinkedIn" class="img-fluid social-icon" style="width: 30px;"></a>
+                      </div>
+                      <div class="col-6 mb-2">
+                          <a href="#"><img src="{% static 'mzumbepycon/images/twitter.png' %}" alt="Twitter" class="img-fluid social-icon" style="width: 30px;"></a>
+                      </div>
+                      <div class="col-6 mb-2">
+                          <a href="#"><img src="{% static 'mzumbepycon/images/instagram.png' %}" alt="Instagram" class="img-fluid social-icon" style="width: 30px;"></a>
+                      </div>
+                      <div class="col-6 mb-2">
+                          <a href="#"><img src="{% static 'mzumbepycon/images/email.png' %}" alt="Gmail" class="img-fluid social-icon" style="width: 30px;"></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
+    // Manually initialize the carousel to ensure it works
+    var carousel = new bootstrap.Carousel('#carouselExample', {
+        interval: 3000, // Slide interval in milliseconds
+        ride: 'carousel'
+    });
+   
+      
+   
+   
+ 
+</script>
+
+<style>
+
+
+
+
+.carousel-inner img {
+    height: 200px;
+    object-fit: cover;
+    
+}
+
+.carousel-inner-img {
+    height: 400px;
+    object-fit: cover;
+   
+    
+}
+@keyframes fadeInOutwardsLarge {
+  0% {
+      transform: scale(1.8);
+      opacity: 0;
+  }
+  50% {
+      transform: scale(1.4);
+      opacity: 0.5;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+</style>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  

@@ -1,0 +1,230 @@
+
+{% load static %}
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pycon Mzumbe</title>
+
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'mzumbepycon/fontawesome/css/all.min.css' %}">
+   
+    \
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+   <style>
+ 
+  
+
+  
+  
+  
+  .slider-description {
+      text-align: center;
+      color: red;
+      margin-top: 200px;
+      font-size: 24px;
+  }
+  .swiper {
+    width: 70%;
+    height: 400px;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .swiper-slide img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 2px;
+  }
+  
+  .testimonial {
+    background-color:#87ceeb;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+.profile-img {
+    width: 200px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.testimonial-text {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.same-height {
+  height: 40%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Style the overlay text */
+.overlay-text {
+  position: relative;
+  top: -30%;      /* Center vertically */
+  left: 50%;     /* Center horizontally */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+  text-align: center;
+}
+
+.position-relative {
+  border-radius: 5px;
+  overflow: hidden; /* Ensure text stays inside the container */
+}
+a.no-underline {
+  text-decoration: none; /* Removes the underline */
+}
+
+.password-field {
+  transition: border-color 0.3s ease-in-out;
+}
+
+.password-field:hover {
+  border-color: #007bff; /* Change border color on hover */
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* Add a glowing effect */
+}
+.username-field {
+  transition: border-color 0.3s ease-in-out;
+}
+
+.username-field:hover {
+  border-color: #007bff; /* Change border color on hover */
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* Add a glowing effect */
+}
+   </style> 
+  </head>
+ <!-- Navigation Bar -->
+
+ 
+
+
+<!-- Main Content -->
+
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:white;">
+    <div class="container">
+      <!-- Logo on the Left -->
+      
+   
+      
+  
+      <!-- Navbar Toggle Button (for mobile view) -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Links and Login Button -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'MUchapter'%}">Home</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'homepage'%}">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'code_of_conduct'%}">Code Of Conduct</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Login'%}">Admin</a>
+          </li>
+        </ul>
+        <div class="ms-3">
+          <a class="btn btn-outline-primary" href="{%url 'UserRegistration'%}" role="button">Become a Member </a>
+        </div>
+      
+    </div>
+  </nav>
+  
+  <!-- Header -->
+
+
+  <!-- Sidebar -->
+ 
+ 
+  <br>
+     
+     
+      
+
+        {% for message in messages %}
+        <p id="messages">{{ message }}</p>
+    {% endfor %}
+  
+     
+        <div class="row " style="margin-top:60px;" >
+        
+      <div class="container mt-4 my-10 text-center">
+       <div class="card " style="padding:20px; margin:20px;">
+        <form method="post" enctype="multipart/form-data">
+          <h3 class="text-center" style="color:#87ceeb; margin-top: 10px;">Admin Login</h3>
+          {% csrf_token %}
+          <div class="row mb-3 " style="margin-top: 10px;   padding: 10px; border-radius: 5px; width: 100%;">
+            <!-- Image display -->
+            <label class="form label d-flex start" for="id_username" >Username:</label>
+             
+      {{ form.username }}
+          
+        </div>
+        <div class="row mb-3 "style="margin-top: 5px;   padding: 10px; border-radius: 10px; width: 100%;" >
+          <label for="id_password1" class="form label d-flex start"  >Password:</label>
+          {{ form.password }} 
+          <!-- No error display for password1 -->
+        </div>
+            
+           
+        
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary" style="background-color: #87ceeb;">login</button>
+            </div>
+          
+</div>
+      </div>
+        </div>
+</form>
+</div>
+      </div>
+     
+
+
+
+
+
+ 
+   
+
+
+</body>
+</html>
