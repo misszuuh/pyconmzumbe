@@ -79,17 +79,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mzumbepycon',
-        
-        'HOST':'localhost',
-        'USER':'root',
-        'PORT':'3306',
-        'PASSWORD':'',
-         'OPTIONS': {
-            'sql_mode': 'STRICT_TRANS_TABLES,STRICT_ALL_TABLES',
-        },
-                
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
