@@ -1,6 +1,6 @@
 Django>=4.2
-mysqlclient>=2.1.1
-pillow>=9.5.0
+
+
 django-bootstrap4>=23.3
 django-widget-tweaks>=1.4.12
 requests>=2.31.0
