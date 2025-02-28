@@ -80,11 +80,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-<<<<<<< HEAD
         'NAME': 'mzumbepycon',
-=======
-        'NAME': 'muchapter',
->>>>>>> backend
         
         'HOST':'localhost',
         'USER':'root',
