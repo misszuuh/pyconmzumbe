@@ -102,7 +102,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
   
-          <!-- Links and Login Button -->
+      <!-- Links and Login Button -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="nav">
           <li class="nav-item">
@@ -125,72 +125,83 @@
       
     </div>
   </nav>
-        
-              <div class="row" style="padding: 30px; margin:30px;">
-                <div class="news-ticker">
-                  <p class="display-6 strong" style="color:#fc8d67;"><b>🌟Welcome to our community,Register now and be part of something great.🌟</b></p>
-              </div>
-            
-            <div class="col-6">
-                <div class="image-container">
-                    <a class="no-underline" >
-                      <img src="{% static 'mzumbepycon/images/i-cgKJ3vG-M.jpg'%}" class="img-fluid same-height" style="width:100%;">
-                     
-                    </a>
-                   
-                  </div>
-                </div>
-       
+  
 
-            <!-- Registration Form -->
-            <div class="col-6">
-                <h3 class="text-center" style="color:#87ceeb ">Register Here</h3>
-                <form method="post" class="mx-5"enctype="multipart/form-data" >
-                    {% csrf_token %}
-                    <div class="row mb-3 ">
-                        <label for="id_fullname" class="form-label d-flex start">Full Name:</label>
-                        {{ form.fullname }}
-                        {{ form.fullname.errors }}
-                    </div>
-                    <div class="row mb-3  ">
-                        <label for="id_course" class="form-label d-flex start">Course:</label>
-                        {{ form.Course }}
-                        {{ form.Course.errors }}
-                    </div>
-                    <div class=" row mb-3">
-                        <label for="id_year" class="form-label d-flex start">Year:</label>
-                        {{ form.year }}
-                        {{ form.year.errors }}
-                    </div>
-                    <div class="row mb-3">
-                        <label for="id_experience" class="form-label d-flex start">Experience:</label>
-                        {{ form.Experience }}
-                        {{ form.Experience.errors }}
-                    </div>
-                    <div class=" row mb-3">
-                        <label for="id_phone"  class="form-label d-flex start" placeolder="Phone e.g:0732456879;">Phone:</label>
-                        {{ form.Phone }}
-                        {{ form.Phone.errors }}
-                    </div>
-                    <div class="row mb-3">
-                        <label for="id_email" class="form-label d-flex start">Email:</label>
-                        {{ form.Email }}
-                        {{ form.Email.errors }}
-                    </div>
-                    <div class=" row mb-3">
-                        <label for="id_student_id" class="form-label d-flex start">Student ID:</label>
-                        {{ form.Student_ID }}
-                        {{ form.Student_ID.errors }}
-                    </div>
-                    <div class="d-grid">
-                        <button type="submit" class="button" style="background-color: #87ceeb; border-radius: 5px; border-color:#87ceeb; font-size:x-large;">Register</button>
-                    </div>
-                </form>
-            </div>
-            
-        </div>
-       
+  <div class="row " style="margin-top:60px;" >
+    <div class="row" style="padding: 1px; margin:1px;">
+      <div class="news-ticker">
+        <p class="display-6 strong" style="color:#fc8d67;"><b>🌟Welcome to our community,Register now and be part of something great.🌟</b></p>
     </div>
+    <div class="col-12 col-md-12 col-sm-12">
+  <div class="container mt-4 my-30 text-center" style=""> 
+   <div class="card " style="padding:20px; margin:20px; ">
+    
+         
+
+      
+
+  
+    
+      <!-- No error display for password1 -->
+   
+    <h3 class="text-center" style="color:#87ceeb ">Register Here</h3>
+    <form method="post" enctype="multipart/form-data" >
+        {% csrf_token %}
+        <div class="row mb-3 "style="margin-top: 5px;   padding: 10px; border-radius: 10px; width: 100%;" >
+          <label for="id_fullname" class="form-label d-flex start">Full Name:</label>
+            {{ form.fullname }}
+            {{ form.fullname.errors }}
+        </div>
+        <div class="row mb-3 "style="margin-top: 5px;   padding: 10px; border-radius: 10px; width: 100%;" >
+          <label for="id_course" class="form-label d-flex start">Course:</label>
+            {{ form.Course }}
+            {{ form.Course.errors }}
+        </div>
+        <div class="row mb-3 "style="margin-top: 5px;   padding: 10px; border-radius: 10px; width: 100%;" >
+          <label for="id_year" class="form-label d-flex start">Year:</label>
+            {{ form.year }}
+            {{ form.year.errors }}
+        </div>
+        <div class="row mb-3 "style="margin-top: 5px;   padding: 10px; border-radius: 10px; width: 100%;" >
+          <label for="id_experience" class="form-label d-flex start">Experience:</label>
+            {{ form.Experience }}
+            {{ form.Experience.errors }}
+        </div>
+        <div class="row mb-3 "style="margin-top: 5px;   padding: 10px; border-radius: 10px; width: 100%;" >
+          <label for="id_phone"  class="form-label d-flex start" placeolder="Phone e.g:0732456879;">Phone:</label>
+            {{ form.Phone }}
+            {{ form.Phone.errors }}
+        </div>
+        <div class="row mb-3 "style="margin-top: 5px;   padding: 10px; border-radius: 10px; width: 100%;" >
+          <label for="id_email" class="form-label d-flex start">Email:</label>
+            {{ form.Email }}
+            {{ form.Email.errors }}
+        </div>
+        <div class="row mb-3 "style="margin-top: 5px;   padding: 10px; border-radius: 10px; width: 100%;" >
+          <label for="id_student_id" class="form-label d-flex start">Student ID:</label>
+            {{ form.Student_ID }}
+            {{ form.Student_ID.errors }}
+        </div>
+        <div class="d-grid">
+            <button type="submit" class="button" style="background-color: #87ceeb; border-radius: 5px; border-color:#87ceeb; font-size:x-large;">Register</button>
+        </div>
+    </form>
+
+       
+    
+     
+</div>
+  </div>
+    </div>
+  </div>
+</form>
+</div>
+</div>
+  </div>
+        
+             
+         
+  
 
     <!-- Bootstrap Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
