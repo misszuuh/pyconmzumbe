@@ -58,31 +58,23 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" style="color: 87ceeb;">Schedule</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'index'%}">Home</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'homepage'%}">Events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color: 87ceeb;">Speaker</a>
+            <a class="nav-link" href="{% url 'code_of_conduct'%}">Code Of Conduct</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color: 87ceeb;">Tickets</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="color: 87ceeb;">Sponsor</a>
+            <a class="nav-link" href="{% url 'Login'%}">Admin</a>
           </li>
         </ul>
         <div class="ms-3">
-
-          <a class="btn btn-outline-primary" href="#" role="button">Login</a>
-
-          <a class="btn btn-outline-primary" href="" role="button">Register</a>
-
-          <a class="btn btn-outline-primary" href="#" role="button" style="color: #87CEEB; border-color: #87CEEB;">
-            Become a Member
-          </a>
-          
-
+          <a class="btn btn-outline-primary" href="{%url 'UserRegistration'%}" role="button">Become a Member </a>
         </div>
-      </div>
+      
     </div>
   </nav>
 
