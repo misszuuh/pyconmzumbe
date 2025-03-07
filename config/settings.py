@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-x7fkzb-t*-lr_8-z5zc$9smrg=ym6xp7*y++g)3a!8%1w7mth7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pyconmzumbe.deploy.tz']
 
 
 # Application definition
